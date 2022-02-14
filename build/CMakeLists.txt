@@ -8,7 +8,7 @@ project(${PRJ_NAME})
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
-file(GLOB SRC_FILES CONFIGURE_DEPENDS "${SRC}/*.cpp")
+file(GLOB SRC_FILES CONFIGURE_DEPENDS "${SRC}/*.cpp" "${SRC}/*.c")
 
 include_directories("${SRC}")
 add_executable(${PRJ_NAME} ${SRC_FILES})
